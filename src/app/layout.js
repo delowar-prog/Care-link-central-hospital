@@ -1,7 +1,13 @@
+'use client'
+import Navber from '@/components/Navber'
+import ThemeProviders from './ThemeProviders'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Banner from '@/components/Banner'
+import TopHeader from '@/components/TopHeader'
+import Footer from '@/components/Footer'
+import Lottie from "lottie-react";
+import scrollBtn from "../assets/animation_llunknd0.json";
+import ScrollToTop from "react-scroll-to-top";
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +16,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='light' style={{colorScheme:'light'}}>
+      <body>
+        <ThemeProviders>
+          <TopHeader></TopHeader>
+          <Navber></Navber>
+          <Banner></Banner>
+          <main>{children}</main>
+          <Footer></Footer>
+          <ScrollToTop smooth component={<Lottie className='bg-cyan-500 rounded w-14 h-14' animationData={scrollBtn} loop={true} />}></ScrollToTop>
+        </ThemeProviders>
+      </body>
     </html>
   )
 }

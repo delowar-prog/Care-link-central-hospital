@@ -1,0 +1,6 @@
+.zoombtn{
+    transition: all 0.5s;
+}
+.zoombtn:hover .hoverstyle{
+    display: block;
+}

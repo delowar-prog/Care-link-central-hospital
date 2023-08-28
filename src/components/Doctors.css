@@ -1,0 +1,7 @@
+.doc-card>img{
+    transition: all 0.5s;
+}
+.doc-card:hover img{
+    filter: brightness(100%);
+    transform: scale(1.02);
+}

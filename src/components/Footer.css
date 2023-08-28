@@ -1,0 +1,7 @@
+.footer-links li{
+cursor: pointer;
+transition: all 0.5s;
+}
+.footer-links li:hover{
+transform:translateX(8px)
+}
