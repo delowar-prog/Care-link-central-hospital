@@ -1,7 +1,8 @@
+'use client'
 import ThemeBtn from "./ThemeBtn"
 import Image from 'next/image'
 import logo from '../assets/logo.png'
-const Navber = () => {
+const Navbar = () => {
     return (
           <div className="flex justify-between sticky top-0 z-50 px-2 py-1 items-center md:px-20 bg-sky-600 dark:bg-gray-900">
             <div className="flex flex-row-reverse gap-10 justify-around items-center">
@@ -42,4 +43,4 @@ const Navber = () => {
     )
 }
 
-export default Navber
+export default Navbar

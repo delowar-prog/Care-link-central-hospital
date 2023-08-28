@@ -1,5 +1,5 @@
 'use client'
-import Navber from '@/components/Navber'
+import Navbar from '@/components/Navbar'
 import ThemeProviders from './ThemeProviders'
 import './globals.css'
 import Banner from '@/components/Banner'
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProviders>
           <TopHeader></TopHeader>
-          <Navber></Navber>
+          <Navbar></Navbar>
           <Banner></Banner>
           <main>{children}</main>
           <Footer></Footer>
