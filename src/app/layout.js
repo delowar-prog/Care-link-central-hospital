@@ -16,13 +16,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='light' style={{colorScheme:'light'}}>
+    <html lang="en" data-theme='light' style={{colorScheme:'light'}}>
       <body>
         <ThemeProviders>
           <TopHeader></TopHeader>
           <Navbar></Navbar>
           <Banner></Banner>
-          <main>{children}</main>
+          {children}
           <Footer></Footer>
           <ScrollToTop smooth component={<Lottie className='bg-cyan-500 rounded w-14 h-14' animationData={scrollBtn} loop={true} />}></ScrollToTop>
         </ThemeProviders>
