@@ -1,7 +1,7 @@
 import Image from "next/image"
-import docimg1 from '../assets/Rectangle 15.png'
-import docimg2 from '../assets/Rectangle 15-1.png'
-import docimg3 from '../assets/Rectangle 15-2.png'
+import docimg1 from '../assets/doc-1.png'
+import docimg2 from '../assets/doc-2.png'
+import docimg3 from '../assets/doc-3.png'
 import { FaLocationDot } from 'react-icons/fa6'
 import { BsCalendarDate } from "react-icons/bs"
 import { AiOutlineDollar } from "react-icons/ai"
