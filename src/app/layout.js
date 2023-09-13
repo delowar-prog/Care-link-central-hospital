@@ -2,7 +2,6 @@
 import Navbar from '@/components/Navbar'
 // import ThemeProviders from './ThemeProviders'
 import './globals.css'
-import Banner from '@/components/Banner'
 import TopHeader from '@/components/TopHeader'
 import Footer from '@/components/Footer'
 import Lottie from "lottie-react";
@@ -20,7 +19,6 @@ export default function RootLayout({ children }) {
       <body>
           <TopHeader></TopHeader>
           <Navbar></Navbar>
-          <Banner></Banner>
           {children}
           <Footer></Footer>
           <ScrollToTop smooth component={<Lottie className='bg-cyan-500 rounded w-14 h-14' animationData={scrollBtn} loop={true} />}></ScrollToTop>

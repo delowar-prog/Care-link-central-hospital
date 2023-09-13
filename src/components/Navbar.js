@@ -2,6 +2,7 @@
 import ThemeBtn from "./ThemeBtn"
 import Image from 'next/image'
 import logo from '../assets/logo.png'
+import Link from "next/link"
 const Navbar = () => {
     return (
           <div className="flex justify-between sticky top-0 z-50 px-2 py-1 items-center md:px-20 bg-sky-600 dark:bg-gray-900">
@@ -22,18 +23,17 @@ const Navbar = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <div>
-                    <Image src={logo} alt="" className="w-[80%]" />
+                <div className="w-full">
+                    <Image src={logo} alt="" className="w-[40%]" />
                 </div>
             </div>
-            <div className="hidden lg:flex justify-between">
-                <ul className="menu menu-horizontal text-white px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Appointment</a></li> 
-                    <li><a>Contact Us</a></li> 
-                    <li><a>Login</a></li>
-                   
+            <div className="hidden w-full lg:flex justify-end">
+                <ul className="flex gap-5 text-white px-1">
+                    <li className="cursor-pointer"><Link href={'/'}>Home</Link></li>
+                    <li className="cursor-pointer"><Link href={'/profile'}>Doctor Profile</Link></li>
+                    <li className="cursor-pointer"><Link href={'/appointment'}>appointment</Link></li> 
+                    <li className="cursor-pointer"><Link href={'/contact'}>Contact Us</Link></li> 
+                    <li className="cursor-pointer"><Link href={'/login'}>Login</Link></li>
                 </ul>
             </div>
             <div className="fixed top-[50%] right-1">
