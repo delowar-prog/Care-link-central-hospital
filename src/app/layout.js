@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import Lottie from "lottie-react";
 import scrollBtn from "../assets/animation_llunknd0.json";
 import ScrollToTop from "react-scroll-to-top";
+import { AuthProvider } from './Providers'
 
 const metadata = {
   title: 'Create Next App',
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <AuthProvider>
           <TopHeader></TopHeader>
           <Navbar></Navbar>
           {children}
           <Footer></Footer>
           <ScrollToTop smooth component={<Lottie className='bg-cyan-500 rounded w-14 h-14' animationData={scrollBtn} loop={true} />}></ScrollToTop>
+        </AuthProvider>
       </body>
     </html>
   )

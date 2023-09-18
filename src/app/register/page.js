@@ -4,12 +4,13 @@ import logimg from '../../assets/Frame--.png'
 import loginImg from '../../assets/Frame.png'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 const RegisterPage = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
-    
+    const router=useRouter()
     const handleSubmit= async (e)=>{
         e.preventDefault()
 
@@ -40,6 +41,7 @@ const RegisterPage = () => {
             if(res.ok){
                 const form=e.target;
                 form.reset();
+                router.push('/login')
             }else{
                 console.log('user registration failed');
             }  
@@ -48,7 +50,7 @@ const RegisterPage = () => {
         }
     }
     return (
-        <div className='mx-20 my-10 flex gap-5 items-center'>
+        <div className='mx-3 md:mx-20 my-10 flex flex-col md:flex-row gap-5 items-center'>
             <div className='relative bg-sky-600 p-10 w-full'>
                 <Image src={logimg} alt={'image'} className='absolute top-0 right-0'></Image>
                 <Image src={loginImg} alt={'image'}></Image>

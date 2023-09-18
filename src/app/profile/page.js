@@ -3,6 +3,7 @@ import CommonBanner from '@/components/CommonBanner'
 import Image from 'next/image'
 import profileImg from '@/assets/doc5.png'
 import { useState } from 'react'
+import MakeAppointment from './MakeAppointment'
 const DoctorsProfile = () => {
     const [show, setShow] = useState(1)
     return (
@@ -21,9 +22,9 @@ const DoctorsProfile = () => {
                     <Image src={profileImg} className='w-[450px]'></Image>
                 </div>
             </div>
-            <div className='profile-details h-screen relative'>
-                <div className='absolute bg-white w-[80%] h-[50vh] left-[10%] -top-5 rounded-x-xl flex flex-col md:flex-row gap-10 justify-between'>
-                    <div className='p-5 w-[70%]'>
+            <div className='profile-details static'>
+                <div className='static bg-white w-[90%] mx-auto rounded-x-xl flex flex-col md:flex-row gap-10 justify-between'>
+                    <div className='p-5 w-full md:w-[65%]'>
                         <h1 className='text-2xl my-5'>CV & Biography</h1>
                         <div className='teb-container'>
                             <ul className='flex gap-2 md:gap-5'>
@@ -112,8 +113,33 @@ const DoctorsProfile = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-[30%] flex flex-col gap-10'>
-                        
+                    <div className='w-full md:w-[35%] flex flex-col gap-10'>
+                        <div className='p-5 mt-14 bg-sky-500 text-white'>
+                            <div>
+                                <h1 className='text-2xl mb-5'>Working Time</h1>
+                            </div>
+                            <div className='flex justify-between pb-2 mb-3 border-b border-white'>
+                                <p>Monday-Thursday</p>
+                                <p>-</p>
+                                <p>04:00pm-09:00pm</p>
+                            </div>
+                            <div className='flex justify-between pb-2 mb-3 border-b border-white'>
+                                <p>Friday</p>
+                                <p>-</p>
+                                <p>09:00am-12:00pm</p>
+                            </div>
+                            <div className='flex justify-between pb-2 mb-3 border-b border-white'>
+                                <p>Saturday</p>
+                                <p>-</p>
+                                <p>06:00pm-09:00pm</p>
+                            </div>
+                            <div className='flex justify-between pb-2 mb-3 border-b border-white'>
+                                <p>Sunday</p>
+                                <p>-</p>
+                                <p>05:00pm-09:00pm</p>
+                            </div>
+                        </div>
+                        <MakeAppointment/>
                     </div>
                 </div>
             </div>

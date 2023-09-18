@@ -7,9 +7,9 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import './Footer.css'
 const Footer = () => {
   return (
-    <div className='flex flex-col md:flex-row p-5 md:p-20 bg-gray-200 gap-8 text-gray-600'>
+    <div className='flex flex-col md:flex-row p-5 md:p-20 bg-blue-500 gap-8 text-white'>
         <div>
-            <Image src={footerLogo} alt='logo' className='bg-gray-400 p-2'></Image>
+            <Image src={footerLogo} alt='logo' className='w-[200px] bg-gray-400 p-2'></Image>
             <ul className='my-5'>
                 <li>12 King Street, Melbourne 3000, AU</li>
                 <li>contact@appolohealth.com</li>
